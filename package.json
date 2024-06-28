@@ -1,7 +1,7 @@
 {
   "name": "@devidw/trpc-openapi",
   "private": false,
-  "version": "1.2.0",
+  "version": "12024.06.28",
   "description": "tRPC OpenAPI",
   "author": "James Berry <jb@jamesbe.com>",
   "license": "MIT",
