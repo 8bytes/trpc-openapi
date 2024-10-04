@@ -34,6 +34,7 @@ export const generateOpenApiDocument = (
     $refStrategy: 'root',
     definitions: opts.defs ?? {},
     definitionPath: 'components/schemas',
+    target: 'openApi3'
   }) as any;
 
   const defsJson = jsonOut['components/schemas'];
