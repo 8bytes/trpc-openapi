@@ -144,7 +144,7 @@ export const createOpenApiNodeHttpHandler = <
       const statusCode = meta?.status ?? 200;
       const headers = meta?.headers ?? {};
       const body: OpenApiSuccessResponse<typeof data> = data;
-      sendResponse(statusCode, headers, body);
+      sendResponse(statusCode, headers as Record<string, string>, body);
     } catch (cause) {
       const error = getErrorFromUnknown(cause);
 
@@ -187,7 +187,7 @@ export const createOpenApiNodeHttpHandler = <
         code: error.code,
         issues: isInputValidationError ? (error.cause as ZodError).errors : undefined,
       };
-      sendResponse(statusCode, headers, body);
+      sendResponse(statusCode, headers as Record<string, string>, body);
     }
   };
 };

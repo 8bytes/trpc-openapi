@@ -15,6 +15,7 @@ export const TRPC_ERROR_CODE_HTTP_STATUS: Record<TRPCError['code'], number> = {
   METHOD_NOT_SUPPORTED: 405,
   TOO_MANY_REQUESTS: 429,
   UNPROCESSABLE_CONTENT: 422,
+  NOT_IMPLEMENTED: 501,
 };
 
 export function getErrorFromUnknown(cause: unknown): TRPCError {
